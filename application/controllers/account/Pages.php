@@ -3,6 +3,6 @@
 class Pages extends CI_Controller {
 
     public function index() {
-        echo "The is Personal Section";
+        $this->load->view('account/pages/index');
     }
 }
