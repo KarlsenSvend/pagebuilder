@@ -23,7 +23,7 @@ angular.module('mgcrea.ngStrapDocs')
     $scope.content = 'Hello Modal<br />This is a multiline message from a controller!';
   }
   MyModalController.$inject = ['$scope'];
-  var myModal = $modal({controller: MyModalController, templateUrl: '/assets/partials/test.html', show: false});
+  var myModal = $modal({controller: MyModalController, templateUrl: '/assets/partials/modal.html', show: false});
   $scope.showModal = function() {
     myModal.$promise.then(myModal.show);
   };

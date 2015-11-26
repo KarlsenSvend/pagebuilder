@@ -28,6 +28,30 @@
   <body ng-controller="pageController">
 
 
+	<div ng-controller="Templates">
+		<button add-template>Add Text Template</button>
+		 
+		<div id="template-container">
+			
+		</div>
+	</div>
+
+
+
+	<div ng-controller="Customer">
+	  <div my-customer></div>
+	</div>
+
+
+
+ 
+    <addbuttonsbutton></addbuttonsbutton>
+    <div id="space-for-buttons">
+
+    </div>
+
+
+
 
  
   	<select ng-model="template" ng-options="t.name for t in templates">
@@ -68,7 +92,7 @@
 				</button>
 
 				<!-- You can use a custom html template with the `data-template` attr -->
-				<button type="button" class="btn btn-lg btn-danger" data-animation="am-fade-and-slide-top" data-template-url="/assets/partials/mod_text.html" bs-modal="modal">Custom Modal
+				<button type="button" class="btn btn-lg btn-danger" data-animation="am-fade-and-slide-top" data-template-url="/assets/partials/modal.html" bs-modal="modal">Custom Modal
 				  <br>
 				  <small>(using data-template)</small>
 				</button>
