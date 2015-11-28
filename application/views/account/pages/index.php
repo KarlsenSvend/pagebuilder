@@ -25,18 +25,10 @@
 	<link rel="stylesheet" href="<?php echo base_url('/assets/css/default.css');?>">
      
   </head>
-  <body ng-controller="pageController">
+<body>
 
 
-	<div ng-controller="Templates">
-		<button add-template>Add Text Template</button>
-		 
-		<div id="template-container">
-			
-		</div>
-	</div>
-
-
+<div ng-controller="pageController">
 
 	<div ng-controller="Customer">
 	  <div my-customer></div>
@@ -110,7 +102,7 @@
 		</div>
 	</div>
 
-
+</div>
 	
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
   </body>

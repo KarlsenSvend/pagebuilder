@@ -94,26 +94,6 @@ pageBuilder.directive("addbuttons", function($compile){
 
 
 
-pageBuilder.controller('Templates', ['$scope', '$document', function($scope, $document) {
-	//console.log($document);
-	// $scope.templateModules = {
-
-	// }
-}]);
-
-pageBuilder.directive("addTemplate", function($compile) {
-
-	var templateUrl: '/assets/partials/mod_text.html';
-	//console.log('im here');
-
-	return function(scope, element, attrs) {
-		element.bind("click", function() {
-			//angular.element(document.getElementById('template-container')).append($compile("Woop")(scope));
-			angular.element(document.getElementById('template-container')).append($compile("<div>"+ templateUrl +"</div>")(scope));
-		});
-	};
-});
-
 
 
 pageBuilder.controller('Customer', ['$scope', function($scope) {
