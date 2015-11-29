@@ -8,22 +8,25 @@
 
 var pageBuilder = angular.module('pageBuilder', []);
 
+pageBuilder.service('$scope', function () {
 
-pageBuilder.controller('Customer', ['$scope',
-    function($scope) {
-        $scope.customer = {
-            name: 'John Botos',
-            address: '15873 N 18th St, Phoenix AZ 85022'
-        };
-    }
-]);
-
-pageBuilder.directive('myCustomer', function() {
-    return {
-        //template: 'Name: {{customer.name}} <br> Address: {{customer.address}}'
-        templateUrl: '/assets/partials/customer.html'
-    };
 });
+
+// pageBuilder.controller('Customer', ['$scope',
+//     function($scope) {
+//         $scope.customer = {
+//             name: 'John Botos',
+//             address: '15873 N 18th St, Phoenix AZ 85022'
+//         };
+//     }
+// ]);
+
+// pageBuilder.directive('myCustomer', function() {
+//     return {
+//         //template: 'Name: {{customer.name}} <br> Address: {{customer.address}}'
+//         templateUrl: '/assets/partials/customer.html'
+//     };
+// });
  
  
 
@@ -37,14 +40,29 @@ pageBuilder.controller('templateController', ['$scope',
     }
 ]);
 
-pageBuilder.directive("addTemplate", ['$scope', function($scope, $http) {
+pageBuilder.directive("addTemplate", ['$scope', '$http', '$sce', function($scope, $http, $sce) {
 
-	var templateUrl = '/assets/partials/mod_text.html';
-	//console.log('im here');
+	// $http.get('/assets/partials/text.html').then(function (data) {
+	// 	$scope.templateData = data.data; 
+	// });
 
-	$http.get(templateUrl).then(function (data) {
-        $scope.content = $scope.trustAsHtml(data.data.PageData);
-    });
+	return function(scope, element, attrs){
+		
+
+		//console.log(attrs.attr);
+
+
+		element.bind("click", function(){
+			//$http.get('/assets/partials/mod_text.html').then(function (data) {
+				//$scope.content = $sce.trustAsHtml(data.data);
+				//$scope.content = data.data;
+				
+				angular.element(document.getElementById('template-container')).append($scope.templateData);
+
+
+	   		//});
+		});
+	};
 
 	// $http({
 	// 	method: 'GET',
@@ -68,10 +86,21 @@ pageBuilder.directive("addTemplate", ['$scope', function($scope, $http) {
 	// 	// or server returns response with an error status.
 	// });
 
-
-
 	}
 ]);
+
+
+
+pageBuilder.directive("testTemplate", ['$http', function($http) {
+	return function(scope, element, attrs){ 
+		element.bind("click", function(){
+			$http.get('/assets/partials/' + attrs.templateType + '.html').then(function (data) {
+				angular.element(document.getElementById('template-container')).append(data.data);
+			}); 	
+		 });
+	}
+}]);
+
 
 // pageBuilder.controller('templatesController', ['$scope', '$document', function($scope, $document) {
 // 	//console.log($document);
