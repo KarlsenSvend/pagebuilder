@@ -5,13 +5,13 @@
 
 
 .modal-backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1040;
-    background: rgba(0, 0, 0, 0.5);
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1040;
+		background: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -21,32 +21,58 @@
 }
 
 
+
+
+
+
+.mbox {
+	border: 1px solid gray; 
+}
+.mbar {
+	background: #e5e5e5;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+.mbox-header, .mbar {
+	padding-left: 15px;
+}
+.mbar a {
+	display: inline-block; 
+	margin-right: 15px;
+}
+.mbox-content {
+	padding: 15px; 
+}
+
+
+
 /* ******************************************* */
 /* Optional CSS, default style for ng-sortable */
 /* ******************************************* */
 
 .as-sortable-item, .as-sortable-placeholder {
-    min-height: 20px;
-    margin: 1px 2px 5px 1px;
-    border-radius: 10px;
+		min-height: 20px;
+		margin: 1px 2px 5px 1px;
+		border-radius: 10px;
 }
 
 .as-sortable-item {
-    border: solid 1px darkgrey;
-    background-color: #ffffff;
+		border: solid 1px darkgrey;
+		background-color: #ffffff;
 }
 
 .as-sortable-item-handle {
 }
 
 .as-sortable-placeholder {
-    border: 1px dashed darkgrey;
-    box-sizing: border-box;
-    background-color: #dbdbdb;
+		border: 1px dashed darkgrey;
+		box-sizing: border-box;
+		background-color: #dbdbdb;
 }
 
 .as-sortable-drag {
-    opacity: .8;
+		opacity: .8;
 }
 
 .as-sortable-hidden {
@@ -55,38 +81,38 @@
 
 
 .slide-animate-container {
-  position:relative;
-  background:white;
-  border:1px solid black;
-  overflow:hidden;
+	position:relative;
+	background:white;
+	border:1px solid black;
+	overflow:hidden;
 }
 
 .slide-animate {
-  padding:10px;
+	padding:10px;
 }
 
 .slide-animate.ng-enter, .slide-animate.ng-leave {
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+	transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
 
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  display:block;
-  padding:10px;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	display:block;
+	padding:10px;
 }
 
 .slide-animate.ng-enter {
-  top:-50px;
+	top:-50px;
 }
 .slide-animate.ng-enter.ng-enter-active {
-  top:0;
+	top:0;
 }
 
 .slide-animate.ng-leave {
-  top:0;
+	top:0;
 }
 .slide-animate.ng-leave.ng-leave-active {
-  top:50px;
+	top:50px;
 }

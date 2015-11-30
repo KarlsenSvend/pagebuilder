@@ -17,15 +17,9 @@
   </head>
 <body>
 	
-<!-- 		<div ng-controller="Customer">
-			<div my-customer></div>
-		</div> -->
- 
-
  		<div ng-controller="templateController">
 			<div id="template-container">
 				
-				<!-- <div ng-controller="Customer"></div> -->
 				<button test-template data-template-type="text">Add Text Template</button>
 				<button test-template data-template-type="text_image">Add Text & Image Template</button>
 			
@@ -34,7 +28,5 @@
 
 		<div ng-bind-html="content"></div>
 
-
- 
 	</body>
 </html>

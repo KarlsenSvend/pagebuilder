@@ -21,8 +21,8 @@ pageBuilder.controller('pageController', function($scope, $modal) {
 
 
 	$scope.templates = [
-		{ name: 'Text', url: '/assets/partials/mod_text.html'},
-		{ name: 'Text and Image', url: '/assets/partials/mod_text_image.html'},
+		{ name: 'Text', url: '/assets/partials/text.html'},
+		{ name: 'Text and Image', url: '/assets/partials/text_image.html'},
       ];
       $scope.template = $scope.templates[0];
 
