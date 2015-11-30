@@ -48,8 +48,8 @@
     </div>
 
 
-    
-			<div id="template-container" as-sortable></div>
+
+			<div id="template-container" as-sortable ng-model="items"></div>
 
 			<button type="button" class="btn btn-md btn-default" ng-click="showModal()">Add a Section</button>
 
